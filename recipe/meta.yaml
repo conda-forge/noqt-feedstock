@@ -6,11 +6,13 @@ package:
 
 
 build:
-  number: 0
+  number: 1
   noarch: generic
 
 outputs:
   - name: noqt
+    build:
+      noarch: generic
     requirements:
       run:
         - {{ pin_subpackage('noqt5', exact=True) }}
